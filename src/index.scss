@@ -1,0 +1,20 @@
+@import-normalize;
+@import './assets/styles/colors.scss';
+
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient($color-background-1, $color-background-2);
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Lora', serif;
+}
+
+* {
+  box-sizing: border-box;
+}

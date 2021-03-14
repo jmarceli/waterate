@@ -11,8 +11,8 @@
       <path
         id="wavePath"
         d="M-40 9 Q-30 7 -20 9 T0 9 T20 9 T40 9 T60 9 T80 9 T100 9 T120 9 V20 H-40z"
-        fill="blue"
-        stroke="blue"
+        fill="black"
+        stroke="black"
       >
         <animateTransform
           attributeName="transform"

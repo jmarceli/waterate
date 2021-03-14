@@ -1,6 +1,7 @@
 import dayjs from 'dayjs';
+import { db } from './init';
 
-export const getWaterForDay = async (db: PouchDB.Database, date: Date) => {
+export const getWaterForDay = async (date: Date) => {
   return db.find({
     selector: {
       timestamp: {

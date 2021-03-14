@@ -1,6 +1,7 @@
 import dayjs from 'dayjs';
+import { db } from './init';
 
-export const removeMostRecent = async (db: PouchDB.Database) => {
+export const removeMostRecent = async () => {
   // const now = new Date(); //format(Date.now(), 'yyyy-MM-dd');
   try {
     const result = await db.find({

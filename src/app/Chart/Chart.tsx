@@ -11,6 +11,22 @@ export const Chart = ({ data }: { data: any[] }) => {
   );
 };
 
+// Usage example:
+
+// <div className={styles.levelBackground}>
+//   <Chart
+//     data={[
+//       { time: '2021-01-26 08:00', water: 0 },
+//       { time: '2021-01-26 09:00', water: 0.2 },
+//       { time: '2021-01-26 09:00', water: 0.5 },
+//       { time: '2021-01-26 09:00', water: 0.6 },
+//       { time: '2021-01-26 10:00', water: 0.8 },
+//       { time: '2021-01-26 15:00', water: 0.9 },
+//     ]}
+//   />
+//   <hr className={styles.level} style={{ bottom: percentage + '%' }} />
+// </div>
+
 // import React, { PureComponent } from 'react';
 // import {
 //   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
