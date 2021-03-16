@@ -2,7 +2,10 @@ $color-white: #fff;
 $color-blue-lightest: #e0ecf7;
 $color-blue-lighter: #bfd7ed;
 $color-blue-light: #60a3d9;
+$color-blue: #60a3d9;
+$color-blue-dark: #0074b7;
+$color-blue-darker: #003b73;
 
-$color-primary: #003b73;
+$color-primary: $color-blue-darker;
 $color-background-1: $color-white;
 $color-background-2: $color-blue-lightest;
