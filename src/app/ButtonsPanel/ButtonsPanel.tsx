@@ -1,6 +1,7 @@
 import React from 'react';
 import { ButtonAdd } from './ButtonAdd/ButtonAdd';
 import styles from './ButtonsPanel.module.scss';
+import { ButtonUndo } from './ButtonUndo/ButtonUndo';
 
 type Props = {
   addHandler: (quantity: number) => void;
@@ -14,19 +15,14 @@ export const ButtonsPanel: React.FC<Props> = ({
 }) => {
   return (
     <div className={styles.root}>
-      <ButtonAdd onClick={() => addHandler(100)}>Cup (100ml)</ButtonAdd>
-      <ButtonAdd onClick={() => addHandler(200)}>Glass (200ml)</ButtonAdd>
-      <ButtonAdd onClick={() => addHandler(300)}>Large Glass (300ml)</ButtonAdd>
-      <div>
-        <button
-          style={{
-            visibility: total > 0 ? 'visible' : 'hidden',
-          }}
-          onClick={() => undoHandler()}
-        >
-          Undo last change
-        </button>
-      </div>
+      <ButtonAdd onClick={() => addHandler(100)} label="Cup" icon="150" />
+      <ButtonAdd onClick={() => addHandler(200)} label="Glass" icon="200" />
+      <ButtonAdd
+        onClick={() => addHandler(300)}
+        label="Large Glass"
+        icon="300"
+      />
+      <ButtonUndo total={total} undoHandler={undoHandler} />
     </div>
   );
 };

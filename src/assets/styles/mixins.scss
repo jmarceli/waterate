@@ -1,0 +1,10 @@
+@mixin button {
+  // styles reset
+  border: none;
+  outline: none;
+  background: #fff;
+  cursor: pointer;
+
+  border-radius: 3px;
+  box-shadow: 0 2px 4px rgba(#003b73, 0.5);
+}
