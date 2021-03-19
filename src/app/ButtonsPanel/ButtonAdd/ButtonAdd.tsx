@@ -20,7 +20,6 @@ export const ButtonAdd: React.FC<Props> = ({ onClick, label, icon }) => {
   return (
     <div className={styles.root}>
       <button className={styles.button} onClick={onClick}>
-        {/* <Image className={styles.icon} /> */}
         <img className={styles.icon} src={icons[icon]} alt="water" />
       </button>
       <div className={styles.label}>

@@ -9,6 +9,8 @@ import { Wave } from './Wave/Wave';
 import { Header } from './Header/Header';
 import { Summary } from './Summary/Summary';
 import { ButtonsPanel } from './ButtonsPanel/ButtonsPanel';
+import { ButtonBase } from './ButtonsPanel/ButtonBase/ButtonBase';
+import { ButtonAdd } from './ButtonsPanel/ButtonAdd/ButtonAdd';
 
 const RECOMMENDED_AMOUNT = 2000; // ml
 
@@ -28,8 +30,7 @@ export const App: React.FC = () => {
 
   useEffect(() => {
     fetch();
-    listener.on('change', (change) => {
-      // console.log('change', change);
+    listener.on('change', () => {
       fetch();
     });
     return () => listener.cancel();
@@ -56,11 +57,36 @@ export const App: React.FC = () => {
           <Summary total={total} percent={percentage} />
         </div>
         <div className={styles.footer}>
-          <ButtonsPanel
-            addHandler={addWaterNow}
-            undoHandler={removeMostRecent}
-            total={total}
-          />
+          <ButtonsPanel>
+            <ButtonBase icon="stats" onClick={() => {}} label="history" />
+            <ButtonBase
+              icon="badge"
+              onClick={() => removeMostRecent()}
+              label="badges"
+            />
+            <ButtonBase
+              icon="undo"
+              onClick={() => removeMostRecent()}
+              label="undo latest"
+            />
+          </ButtonsPanel>
+          <ButtonsPanel>
+            <ButtonAdd
+              onClick={() => addWaterNow(100)}
+              label="Cup"
+              icon="150"
+            />
+            <ButtonAdd
+              onClick={() => addWaterNow(200)}
+              label="Glass"
+              icon="200"
+            />
+            <ButtonAdd
+              onClick={() => addWaterNow(300)}
+              label="Large Glass"
+              icon="300"
+            />
+          </ButtonsPanel>
         </div>
       </main>
     </div>
