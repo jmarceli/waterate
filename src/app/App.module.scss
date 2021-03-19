@@ -11,14 +11,8 @@
 
 .main {
   min-height: 100vh;
-  display: flex;
-  flex: 1 0 auto;
-  flex-direction: column;
   position: relative;
   z-index: 2;
-  align-items: center;
-  justify-content: space-between;
-  padding: 30px 0 20px;
 }
 
 .background {

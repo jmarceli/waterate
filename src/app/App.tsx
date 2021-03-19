@@ -1,16 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { useAsyncFn } from 'react-use';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { listener } from '../db/init';
+import { Wave } from './common/Wave/Wave';
+import { Badges } from './pages/Badges/Badges';
+import { History } from './pages/History/History';
+import { Home } from './pages/Home/Home';
 import styles from './App.module.scss';
-import { addWaterNow } from '../db/addWaterNow';
-import { removeMostRecent } from '../db/removeMostRecent';
+import { useAsyncFn } from 'react-use';
 import { getWaterForDay } from '../db/getWaterForDay';
-import { Wave } from './Wave/Wave';
-import { Header } from './Header/Header';
-import { Summary } from './Summary/Summary';
-import { ButtonsPanel } from './ButtonsPanel/ButtonsPanel';
-import { ButtonBase } from './ButtonsPanel/ButtonBase/ButtonBase';
-import { ButtonAdd } from './ButtonsPanel/ButtonAdd/ButtonAdd';
 
 const RECOMMENDED_AMOUNT = 2000; // ml
 
@@ -50,44 +47,19 @@ export const App: React.FC = () => {
         <Wave height={percentage} />
       </div>
       <main className={styles.main}>
-        <div className={styles.header}>
-          <Header />
-        </div>
-        <div className={styles.summary}>
-          <Summary total={total} percent={percentage} />
-        </div>
-        <div className={styles.footer}>
-          <ButtonsPanel>
-            <ButtonBase icon="stats" onClick={() => {}} label="history" />
-            <ButtonBase
-              icon="badge"
-              onClick={() => removeMostRecent()}
-              label="badges"
-            />
-            <ButtonBase
-              icon="undo"
-              onClick={() => removeMostRecent()}
-              label="undo latest"
-            />
-          </ButtonsPanel>
-          <ButtonsPanel>
-            <ButtonAdd
-              onClick={() => addWaterNow(100)}
-              label="Cup"
-              icon="150"
-            />
-            <ButtonAdd
-              onClick={() => addWaterNow(200)}
-              label="Glass"
-              icon="200"
-            />
-            <ButtonAdd
-              onClick={() => addWaterNow(300)}
-              label="Large Glass"
-              icon="300"
-            />
-          </ButtonsPanel>
-        </div>
+        <Router>
+          <Switch>
+            <Route path="/history">
+              <History />
+            </Route>
+            <Route path="/badges">
+              <Badges />
+            </Route>
+            <Route path="/">
+              <Home total={total} percentage={percentage} />
+            </Route>
+          </Switch>
+        </Router>
       </main>
     </div>
   );
