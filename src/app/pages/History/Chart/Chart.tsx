@@ -8,23 +8,26 @@ import {
   Tooltip,
   XAxis,
   YAxis,
+  ReferenceLine,
 } from 'recharts';
 import { getGroupedData } from '../../../../shared/db/getGroupedData';
+import { FORMAT_DISPLAY_DAY } from '../../../../shared/time/time';
+import { TooltipContent } from './TooltipContent/TooltipContent';
 
 export const Chart = ({ data }: { data: any[] }) => {
   const now = new Date();
   const [{ value }, fetch] = useAsyncFn(async () => {
     const result: any = await getGroupedData(
-      dayjs(now).subtract(10, 'day'),
-      dayjs(),
+      dayjs(now).subtract(1, 'day'),
+      dayjs(now).add(1, 'day'),
     );
     // if (!result.docs) {
     //   console.error(result);
     //   throw Error('Unexpected error please reload application');
     // }
 
-    console.log('result', result);
-    return result.docs;
+    console.log('chart', result);
+    return result;
   });
 
   useEffect(() => {
@@ -33,11 +36,34 @@ export const Chart = ({ data }: { data: any[] }) => {
 
   return (
     <ResponsiveContainer height="100%" aspect={375 / 320}>
-      <LineChart width={400} height={400} data={data}>
-        <YAxis tickSize={3} mirror axisLine={false} />
-        <XAxis tickSize={3} axisLine={false} />
-        <Line type="monotone" dataKey="water" stroke="#666" strokeWidth={2} />
-        <Tooltip />
+      <LineChart width={400} height={400} data={value}>
+        <YAxis
+          tickSize={3}
+          mirror
+          axisLine={false}
+          interval="preserveStartEnd"
+        />
+        <XAxis
+          tickSize={3}
+          axisLine={false}
+          dataKey="x"
+          interval="preserveStartEnd"
+          minTickGap={50}
+          tickFormatter={(value, index) => {
+            return dayjs(value).format(FORMAT_DISPLAY_DAY);
+          }}
+        />
+        <ReferenceLine
+          y={2000}
+          label="2 liters"
+          stroke="red"
+          strokeDasharray="3 3"
+        />
+        <Line type="monotone" dataKey="y" stroke="#003b73" strokeWidth={2} />
+        <Tooltip
+          cursor={{ stroke: '#7495B5', strokeWidth: 2 }}
+          content={<TooltipContent />}
+        />
       </LineChart>
     </ResponsiveContainer>
   );

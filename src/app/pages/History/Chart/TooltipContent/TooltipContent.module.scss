@@ -1,0 +1,13 @@
+@import '/src/assets/styles/colors.scss';
+
+.root {
+  padding: 5px 10px;
+  background: #fff;
+  border: 1px solid $color-primary;
+  text-align: left;
+  border-radius: 3px;
+
+  p {
+    margin: 5px;
+  }
+}
