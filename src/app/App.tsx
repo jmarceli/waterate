@@ -19,7 +19,7 @@ export const App: React.FC = () => {
       console.error(result);
       throw Error('Unexpected error please reload application');
     }
-    console.log('waterForDay', result);
+    // console.log('waterForDay', result);
     return result.rows;
   });
 

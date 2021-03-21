@@ -9,7 +9,7 @@ export const addWaterNow = async (quantity: number): Promise<void> => {
       const isoToday = await addWaterAtSecond(quantity);
       await recalculateDaily(isoToday);
       success = true;
-      console.log('success', success);
+      // console.log('success', success);
     } catch (err) {
       // retry if conflict happens
       if (err.name !== 'conflict') {
@@ -25,16 +25,16 @@ export const recalculateDaily = async (isoToday: Dayjs): Promise<void> => {
     endkey: isoToday.endOf('day').format('YYYY-MM-DDTHH:mm:ss'),
     include_docs: true,
   };
-  console.log('query', query);
+  // console.log('query', query);
   const allWaterToday = await db.allDocs(query);
-  console.log('allWaterToday', allWaterToday);
+  // console.log('allWaterToday', allWaterToday);
 
   const totalWaterToday = allWaterToday.rows.reduce(
     (total: number, row: any) => total + parseInt(row.doc.quantity),
     0,
   );
 
-  console.log('totalWaterToday', totalWaterToday);
+  // console.log('totalWaterToday', totalWaterToday);
   let doc = null;
   try {
     doc = await dbDaily.get(isoToday.startOf('day').format('YYYY-MM-DD'));
@@ -48,11 +48,11 @@ export const recalculateDaily = async (isoToday: Dayjs): Promise<void> => {
     quantity: totalWaterToday,
     _rev: doc?._rev, //isoToday.format('YYYY-MM-DDTHH:mm:ss'),
   });
-  const waterToday = await dbDaily.allDocs({
-    key: isoToday.startOf('day').format('YYYY-MM-DD'),
-    include_docs: true,
-  });
-  console.log('waterToday', waterToday);
+  // const waterToday = await dbDaily.allDocs({
+  //   key: isoToday.startOf('day').format('YYYY-MM-DD'),
+  //   include_docs: true,
+  // });
+  // console.log('waterToday', waterToday);
 };
 
 const addWaterAtSecond = async (quantity: number): Promise<Dayjs> => {

@@ -20,7 +20,7 @@ export const removeMostRecent = async () => {
     //   sort: [{ timestamp: 'desc' }],
     //   limit: 1,
     // });
-    console.log('result', result);
+    // console.log('result', result);
     if (
       result &&
       result.rows &&
