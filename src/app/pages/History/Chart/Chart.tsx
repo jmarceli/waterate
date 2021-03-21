@@ -1,11 +1,43 @@
-import React from 'react';
-import { LineChart, Line, ResponsiveContainer } from 'recharts';
+import dayjs from 'dayjs';
+import React, { useEffect } from 'react';
+import { useAsyncFn } from 'react-use';
+import {
+  LineChart,
+  Line,
+  ResponsiveContainer,
+  Tooltip,
+  XAxis,
+  YAxis,
+} from 'recharts';
+import { getGroupedData } from '../../../../shared/db/getGroupedData';
 
 export const Chart = ({ data }: { data: any[] }) => {
+  const now = new Date();
+  const [{ value }, fetch] = useAsyncFn(async () => {
+    const result: any = await getGroupedData(
+      dayjs(now).subtract(10, 'day'),
+      dayjs(),
+    );
+    // if (!result.docs) {
+    //   console.error(result);
+    //   throw Error('Unexpected error please reload application');
+    // }
+
+    console.log('result', result);
+    return result.docs;
+  });
+
+  useEffect(() => {
+    fetch();
+  }, [fetch]);
+
   return (
-    <ResponsiveContainer height="100%" aspect={4.0 / 3.0}>
+    <ResponsiveContainer height="100%" aspect={375 / 320}>
       <LineChart width={400} height={400} data={data}>
+        <YAxis tickSize={3} mirror axisLine={false} />
+        <XAxis tickSize={3} axisLine={false} />
         <Line type="monotone" dataKey="water" stroke="#666" strokeWidth={2} />
+        <Tooltip />
       </LineChart>
     </ResponsiveContainer>
   );

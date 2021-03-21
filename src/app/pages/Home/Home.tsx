@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Home.module.scss';
-import { addWaterNow } from '../../../db/addWaterNow';
-import { removeMostRecent } from '../../../db/removeMostRecent';
+import { addWaterNow } from '../../../shared/db/addWaterNow';
+import { removeMostRecent } from '../../../shared/db/removeMostRecent';
 import { Header } from '../../common/Header/Header';
 import { Summary } from './Summary/Summary';
 import { ButtonsPanel } from '../../common/ButtonsPanel/ButtonsPanel';
