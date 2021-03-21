@@ -8,6 +8,7 @@ import { useAsyncFn } from 'react-use';
 import { getGroupedData } from '../../../shared/db/getGroupedData';
 import dayjs, { Dayjs } from 'dayjs';
 import { range } from 'lodash';
+import { ButtonsPanel } from '../../common/ButtonsPanel/ButtonsPanel';
 
 const lastWeekRange = (date: Dayjs) => {
   return range(7)
@@ -43,11 +44,13 @@ export const History: React.FC = () => {
       </div>
       <h2 className={styles.title}>Last week history</h2>
       <div className={styles.chart}>{value && <Chart data={value} />}</div>
-      <ButtonBase
-        icon="back"
-        onClick={() => history.push('/')}
-        label="return"
-      />
+      <ButtonsPanel>
+        <ButtonBase
+          icon="back"
+          onClick={() => history.push('/')}
+          label="return"
+        />
+      </ButtonsPanel>
     </div>
   );
 };

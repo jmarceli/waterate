@@ -36,13 +36,12 @@ export const Home: React.FC<Props> = ({ total, percentage }) => {
             onClick={() => history.push('/badges')}
             label="badges"
           />
-          {total > 0 && (
-            <ButtonBase
-              icon="undo"
-              onClick={() => removeMostRecent()}
-              label="undo latest"
-            />
-          )}
+          <ButtonBase
+            icon="undo"
+            onClick={() => removeMostRecent()}
+            label="undo latest"
+            hidden={total === 0}
+          />
         </ButtonsPanel>
         <ButtonsPanel>
           <ButtonAdd onClick={() => addWaterNow(100)} label="Cup" icon="150" />

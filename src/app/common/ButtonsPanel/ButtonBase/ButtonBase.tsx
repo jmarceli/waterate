@@ -9,6 +9,7 @@ type Props = {
   onClick: () => void;
   label: string;
   icon: 'stats' | 'undo' | 'badge' | 'back';
+  hidden?: boolean;
 };
 
 const icons = {
@@ -18,9 +19,17 @@ const icons = {
   back: back,
 };
 
-export const ButtonBase: React.FC<Props> = ({ onClick, label, icon }) => {
+export const ButtonBase: React.FC<Props> = ({
+  onClick,
+  label,
+  icon,
+  hidden = false,
+}) => {
   return (
-    <div className={styles.root}>
+    <div
+      className={styles.root}
+      style={{ visibility: hidden ? 'hidden' : 'visible' }}
+    >
       <button className={styles.button} onClick={onClick}>
         <img className={styles.icon} src={icons[icon]} alt="water" />
       </button>
