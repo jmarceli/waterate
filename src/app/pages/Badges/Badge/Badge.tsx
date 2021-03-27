@@ -4,6 +4,7 @@ import unknown from './icon-badge-unknown.svg';
 import firstSip from './icon-badge-first-sip.svg';
 import waterWeek from './icon-badge-water-week.svg';
 import waterMonth from './icon-badge-water-month.svg';
+import classnames from 'classnames';
 
 type Props = {
   label: string;
@@ -31,8 +32,9 @@ export const Badge: React.FC<Props> = ({
   details,
   fullView = false,
 }) => {
+  const rootCss = classnames(styles.root, { [styles.isFullView]: fullView });
   return (
-    <div className={styles.root} style={{ opacity: active ? 1 : 0.3 }}>
+    <div className={rootCss} style={{ opacity: active ? 1 : 0.3 }}>
       <button className={styles.button} onClick={() => onClick(icon)}>
         <img
           className={styles.icon}
@@ -41,7 +43,7 @@ export const Badge: React.FC<Props> = ({
         />
       </button>
       <div className={styles.label}>{discovered ? label : 'Discover'}</div>
-      {fullView && <div>{details}</div>}
+      {fullView && <div className={styles.description}>{details}</div>}
     </div>
   );
 };

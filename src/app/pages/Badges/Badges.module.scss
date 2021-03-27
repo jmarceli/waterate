@@ -14,4 +14,13 @@
 
 .badgesList {
   position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+
+  // make it 3 columns
+  & > * {
+    width: 33%;
+  }
 }

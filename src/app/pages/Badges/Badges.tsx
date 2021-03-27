@@ -22,22 +22,20 @@ export const Badges: React.FC = () => {
       <div className={styles.header}>
         <Header subtitle="Get unique water badges!" />
       </div>
-      <div className={styles.badgesList}>
-        {selectedBadgeId && <BadgeDetails selectedBadgeId={selectedBadgeId} />}
-        {!selectedBadgeId && (
-          <div>
-            {badgesList.map((badge) => (
-              <Badge
-                icon={badge.icon}
-                label={badge.label}
-                discovered={badge.discovered}
-                onClick={showDetails}
-                details={badge.details}
-              />
-            ))}
-          </div>
-        )}
-      </div>
+      {selectedBadgeId && <BadgeDetails selectedBadgeId={selectedBadgeId} />}
+      {!selectedBadgeId && (
+        <div className={styles.badgesList}>
+          {badgesList.map((badge) => (
+            <Badge
+              icon={badge.icon}
+              label={badge.label}
+              discovered={badge.discovered}
+              onClick={showDetails}
+              details={badge.details}
+            />
+          ))}
+        </div>
+      )}
       <ButtonsPanel>
         <ButtonBase
           icon="back"

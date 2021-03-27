@@ -1,5 +1,6 @@
 .root {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   background: none;
   padding: 0 12px;
 }
@@ -14,8 +15,6 @@
   flex-direction: row;
   justify-content: center;
   margin: 16px 0 4px;
-  width: 96px;
-  height: 72px;
 }
 
 .icon {
@@ -31,8 +30,20 @@
   font-weight: 600;
 }
 
-.description {
-  position: absolute;
-  top: 0;
-  left: 0;
+// .description {
+// }
+
+.isFullView {
+  .icon {
+    width: 256px;
+    height: 256px;
+  }
+  .label {
+    padding: 10px 0 0;
+    font-size: 2rem;
+  }
+  .description {
+    padding: 20px 10px 10px;
+    font-size: 1.3rem;
+  }
 }
