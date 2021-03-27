@@ -10,7 +10,9 @@ type Props = {
   icon: 'unknown' | 'firstSip' | 'waterWeek' | 'waterMonth';
   active?: boolean;
   discovered?: boolean;
-  onClick?: () => void;
+  onClick: (details: string) => void;
+  details: string;
+  fullView?: boolean;
 };
 
 const icons = {
@@ -26,17 +28,20 @@ export const Badge: React.FC<Props> = ({
   onClick,
   discovered = false,
   active = false,
+  details,
+  fullView = false,
 }) => {
   return (
     <div className={styles.root} style={{ opacity: active ? 1 : 0.3 }}>
-      <button className={styles.button} onClick={onClick}>
+      <button className={styles.button} onClick={() => onClick(icon)}>
         <img
           className={styles.icon}
           src={icons[discovered ? icon : 'unknown']}
           alt={`badge ${icon}`}
         />
       </button>
-      <div className={styles.label}>{discovered ? label : 'Unknown'}</div>
+      <div className={styles.label}>{discovered ? label : 'Discover'}</div>
+      {fullView && <div>{details}</div>}
     </div>
   );
 };

@@ -1,33 +1,49 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './Badges.module.scss';
 import { Header } from '../../common/Header/Header';
 import { ButtonsPanel } from '../../common/ButtonsPanel/ButtonsPanel';
 import { ButtonBase } from '../../common/ButtonsPanel/ButtonBase/ButtonBase';
 import { useHistory } from 'react-router-dom';
 import { Badge } from './Badge/Badge';
+import { BadgeDetails } from './BadgeDetails/BadgeDetails';
+import { badgesList } from '../../../shared/badgesList';
 
 export const Badges: React.FC = () => {
+  const [selectedBadgeId, setSelectedBadgeId] = useState('');
   const history = useHistory();
+  const showDetails = (selectedBadgeId: string) => {
+    setSelectedBadgeId(selectedBadgeId);
+  };
+  const hideDetails = () => {
+    setSelectedBadgeId('');
+  };
   return (
     <div className={styles.root}>
       <div className={styles.header}>
         <Header subtitle="Get unique water badges!" />
       </div>
-      <div>
-        <Badge icon="firstSip" label="First Sip" discovered />
-        <Badge icon="waterWeek" label="Water Week" discovered />
-        <Badge icon="waterMonth" label="Water Month" />
-        <Badge icon="unknown" label="Unknown" />
-        <Badge icon="unknown" label="Unknown" />
-        <Badge icon="unknown" label="Unknown" />
-        <Badge icon="unknown" label="Unknown" />
-        <Badge icon="unknown" label="Unknown" />
-        <Badge icon="unknown" label="Unknown" />
+      <div className={styles.badgesList}>
+        {selectedBadgeId && <BadgeDetails selectedBadgeId={selectedBadgeId} />}
+        {!selectedBadgeId && (
+          <div>
+            {badgesList.map((badge) => (
+              <Badge
+                icon={badge.icon}
+                label={badge.label}
+                discovered={badge.discovered}
+                onClick={showDetails}
+                details={badge.details}
+              />
+            ))}
+          </div>
+        )}
       </div>
       <ButtonsPanel>
         <ButtonBase
           icon="back"
-          onClick={() => history.push('/')}
+          onClick={() => {
+            selectedBadgeId ? hideDetails() : history.push('/');
+          }}
           label="return"
         />
       </ButtonsPanel>
