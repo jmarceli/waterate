@@ -4,8 +4,18 @@ import pouchDbFind from 'pouchdb-find';
 console.log('init db');
 PouchDB.plugin(pouchDbFind);
 
-export const db = new PouchDB('water');
-export const dbDaily = new PouchDB('water_daily');
+export const db = new PouchDB('water', {
+  revs_limit: 1,
+  auto_compaction: true,
+});
+export const dbDaily = new PouchDB('water_daily', {
+  revs_limit: 1,
+  auto_compaction: true,
+});
+export const dbStats = new PouchDB('water_stats', {
+  revs_limit: 1,
+  auto_compaction: true,
+});
 // PouchDB.debug.enable('*');
 
 // db.createIndex({
@@ -55,6 +65,11 @@ export const dbDaily = new PouchDB('water_daily');
 //   .catch(function (err) {
 //     console.log(err);
 //   });
+
+export const listenerStats = dbStats.changes({
+  since: 'now',
+  live: true,
+});
 
 export const listener = dbDaily.changes({
   since: 'now',

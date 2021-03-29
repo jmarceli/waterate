@@ -2,6 +2,7 @@
 import dayjs from 'dayjs';
 import { recalculateDaily } from './addWaterNow';
 import { db } from './init';
+import { decrementStats } from './updateStats';
 
 export const removeMostRecent = async () => {
   try {
@@ -28,9 +29,12 @@ export const removeMostRecent = async () => {
       result.rows.length > 0 &&
       result.rows[0].doc
     ) {
-      await db.remove(result.rows[0].doc);
+      const entry: any = result.rows[0].doc;
+      await db.remove(entry);
 
-      await recalculateDaily(dayjs(result.rows[0].doc._id));
+      await decrementStats(entry.quantity.toFixed(0));
+
+      await recalculateDaily(dayjs(entry._id));
     }
   } catch (error) {
     console.error(error);

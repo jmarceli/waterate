@@ -32,6 +32,7 @@ export const Badges: React.FC = () => {
               discovered={badge.discovered}
               onClick={showDetails}
               details={badge.details}
+              key={badge.icon}
             />
           ))}
         </div>
