@@ -44,7 +44,7 @@ export const Home: React.FC<Props> = ({ total, percentage }) => {
           />
         </ButtonsPanel>
         <ButtonsPanel>
-          <ButtonAdd onClick={() => addWaterNow(100)} label="Cup" icon="150" />
+          <ButtonAdd onClick={() => addWaterNow(150)} label="Cup" icon="150" />
           <ButtonAdd
             onClick={() => addWaterNow(200)}
             label="Glass"

@@ -25,7 +25,10 @@ export const getStats = async (name: string): Promise<Stats> => {
   try {
     return await dbStats.get(name);
   } catch (error) {
-    return { _id: name, value: 0 };
+    if (error.name === 'not_found') {
+      return { _id: name, value: 0 };
+    }
+    throw error;
   }
 };
 

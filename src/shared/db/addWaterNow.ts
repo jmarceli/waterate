@@ -59,9 +59,8 @@ const updateWaterAtDay = async (id: string, quantity: number) => {
       throw err;
     }
   }
-  // here is the loop
-  console.log(docs);
-  console.log(quantity);
+  // console.log(docs);
+  // console.log(quantity);
   const res = await dbDaily.put(
     {
       _id: id,
@@ -70,7 +69,7 @@ const updateWaterAtDay = async (id: string, quantity: number) => {
     },
     { force: true },
   );
-  console.log(res);
+  // console.log(res);
   return res;
 };
 
