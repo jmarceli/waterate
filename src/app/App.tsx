@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 import { listener } from '../shared/db/init';
 import { Wave } from './common/Wave/Wave';
 import { Badges } from './pages/Badges/Badges';
