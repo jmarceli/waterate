@@ -32,7 +32,7 @@
       "pictureAspect": "shadow",
       "themeColor": "#e0ecf7",
       "manifest": {
-        "name": "Water App",
+        "name": "Waterate",
         "display": "standalone",
         "orientation": "notSet",
         "onConflict": "override",
