@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0be831b1.chunk.css",
+    "main.js": "/static/js/main.e2c45604.chunk.js",
+    "main.js.map": "/static/js/main.e2c45604.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.fd9fadd9.js",
+    "runtime-main.js.map": "/static/js/runtime-main.fd9fadd9.js.map",
+    "static/js/2.16731ad1.chunk.js": "/static/js/2.16731ad1.chunk.js",
+    "static/js/2.16731ad1.chunk.js.map": "/static/js/2.16731ad1.chunk.js.map",
+    "static/js/3.6aecc6ef.chunk.js": "/static/js/3.6aecc6ef.chunk.js",
+    "static/js/3.6aecc6ef.chunk.js.map": "/static/js/3.6aecc6ef.chunk.js.map",
+    "index.html": "/index.html",
+    "service-worker.js": "/service-worker.js",
+    "service-worker.js.map": "/service-worker.js.map",
+    "static/css/main.0be831b1.chunk.css.map": "/static/css/main.0be831b1.chunk.css.map",
+    "static/js/2.16731ad1.chunk.js.LICENSE.txt": "/static/js/2.16731ad1.chunk.js.LICENSE.txt",
+    "static/media/Wave.e67728a7.svg": "/static/media/Wave.e67728a7.svg",
+    "static/media/icon-back.7aecc83e.svg": "/static/media/icon-back.7aecc83e.svg",
+    "static/media/icon-badge-first-sip.b8203e15.svg": "/static/media/icon-badge-first-sip.b8203e15.svg",
+    "static/media/icon-badge-unknown.ca065d1b.svg": "/static/media/icon-badge-unknown.ca065d1b.svg",
+    "static/media/icon-badge-water-month.83314aad.svg": "/static/media/icon-badge-water-month.83314aad.svg",
+    "static/media/icon-badge-water-week.3fd8c120.svg": "/static/media/icon-badge-water-week.3fd8c120.svg",
+    "static/media/icon-badge.cad09c12.svg": "/static/media/icon-badge.cad09c12.svg",
+    "static/media/icon-stats.f496975c.svg": "/static/media/icon-stats.f496975c.svg",
+    "static/media/icon-undo.05d1af9a.svg": "/static/media/icon-undo.05d1af9a.svg",
+    "static/media/water-150.e445defd.svg": "/static/media/water-150.e445defd.svg",
+    "static/media/water-200.c2c9d8c1.svg": "/static/media/water-200.c2c9d8c1.svg",
+    "static/media/water-300.b198655f.svg": "/static/media/water-300.b198655f.svg",
+    "static/media/App.module.scss": "/static/media/watermark.970d4269.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fd9fadd9.js",
+    "static/js/2.16731ad1.chunk.js",
+    "static/css/main.0be831b1.chunk.css",
+    "static/js/main.e2c45604.chunk.js"
+  ]
+}

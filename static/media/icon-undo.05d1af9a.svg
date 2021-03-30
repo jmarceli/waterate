@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-undo</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon-undo" fill-rule="nonzero" fill="#003B73">
+            <g transform="translate(7.000000, 8.000000)" id="Combined-Shape">
+                <path d="M23.2401143,0.969272499 C31.5437607,3.99155265 35.8251541,13.1730303 32.8028739,21.4766767 C29.7805938,29.7803232 20.5991162,34.0617165 12.2954697,31.0394364 L14.0055704,26.3409733 C19.7143274,28.4187909 26.0265932,25.475333 28.1044108,19.766576 C30.1822284,14.0578191 27.2387705,7.74555321 21.5300136,5.6677356 C16.7985593,3.94562707 11.6525426,5.67273338 8.84632739,9.56467355 L13.1556967,11.1331557 L2.81562677,19.0756335 L-6.21724894e-15,6.3448737 L4.02262824,7.80899064 C7.87399543,1.33311041 15.9000175,-1.70230423 23.2401143,0.969272499 Z"></path>
+            </g>
+        </g>
+    </g>
+</svg>

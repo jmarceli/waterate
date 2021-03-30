@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="128px" height="128px" viewBox="0 0 128 128" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>water-200</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="water-200">
+            <g id="Group-6" transform="translate(23.000000, 24.000000)">
+                <path d="M6,13 C21,12.0331408 30,16 41,16 C52,16 67,15 76,13 C74,45 69,95 69,95 L15,96 C15,96 8,30 6,13 Z" id="Path-3" stroke="#003B73" fill="#E0ECF7"></path>
+                <path d="M41,0 L82,0 L71.547372,95.0238908 C71.2451735,97.7711504 68.762363,100 66.002098,100 L41,100 L15.997902,100 C13.237637,100 10.7548265,97.7711504 10.452628,95.0238908 L0,0 L41,0 Z M75,6 L7,6 L15.496836,90.0242672 C15.7752814,92.7777832 18.2375338,95 20.9976716,95 L61.0023284,95 C63.7624662,95 66.2247186,92.7777832 66.503164,90.0242672 L75,6 Z" id="Combined-Shape" fill="#003B73"></path>
+            </g>
+        </g>
+    </g>
+</svg>
