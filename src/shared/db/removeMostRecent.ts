@@ -32,7 +32,9 @@ export const removeMostRecent = async () => {
       const entry: any = result.rows[0].doc;
       await db.remove(entry);
 
-      await decrementStats(entry.quantity.toFixed(0));
+      if (entry.quantity) {
+        await decrementStats(entry.quantity.toFixed(0));
+      }
 
       await recalculateDaily(dayjs(entry._id));
     }
