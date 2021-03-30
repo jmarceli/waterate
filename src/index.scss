@@ -18,4 +18,5 @@ h3 {
 * {
   box-sizing: border-box;
   touch-action: manipulation;
+  -webkit-user-select: none;
 }
