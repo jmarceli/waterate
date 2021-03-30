@@ -30,9 +30,9 @@ export const ButtonBase: React.FC<Props> = ({
       className={styles.root}
       style={{ visibility: hidden ? 'hidden' : 'visible' }}
     >
-      <button className={styles.button} onClick={onClick}>
+      <div className={styles.button} onClick={onClick}>
         <img className={styles.icon} src={icons[icon]} alt="water" />
-      </button>
+      </div>
       <div className={styles.label}>{label}</div>
     </div>
   );

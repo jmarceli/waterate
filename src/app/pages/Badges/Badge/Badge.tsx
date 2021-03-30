@@ -35,13 +35,13 @@ export const Badge: React.FC<Props> = ({
   const rootCss = classnames(styles.root, { [styles.isFullView]: fullView });
   return (
     <div className={rootCss} style={{ opacity: active ? 1 : 0.3 }}>
-      <button className={styles.button} onClick={() => onClick(icon)}>
+      <div className={styles.button} onClick={() => onClick(icon)}>
         <img
           className={styles.icon}
           src={icons[discovered ? icon : 'unknown']}
           alt={`badge ${icon}`}
         />
-      </button>
+      </div>
       <div className={styles.label}>{discovered ? label : 'Discover'}</div>
       {fullView && <div className={styles.description}>{details}</div>}
     </div>

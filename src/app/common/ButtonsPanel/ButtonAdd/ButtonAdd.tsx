@@ -19,9 +19,9 @@ const icons = {
 export const ButtonAdd: React.FC<Props> = ({ onClick, label, icon }) => {
   return (
     <div className={styles.root}>
-      <button className={styles.button} onClick={onClick}>
+      <div className={styles.button} onClick={onClick}>
         <img className={styles.icon} src={icons[icon]} alt="water" />
-      </button>
+      </div>
       <div className={styles.label}>
         {label}
         <br />
