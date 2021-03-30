@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/waterate/static/css/main.17edc70b.chunk.css",
+    "main.css": "/waterate/static/css/main.0d886270.chunk.css",
     "main.js": "/waterate/static/js/main.ab0104c4.chunk.js",
     "main.js.map": "/waterate/static/js/main.ab0104c4.chunk.js.map",
     "runtime-main.js": "/waterate/static/js/runtime-main.f214d78c.js",
@@ -12,7 +12,7 @@
     "index.html": "/waterate/index.html",
     "service-worker.js": "/waterate/service-worker.js",
     "service-worker.js.map": "/waterate/service-worker.js.map",
-    "static/css/main.17edc70b.chunk.css.map": "/waterate/static/css/main.17edc70b.chunk.css.map",
+    "static/css/main.0d886270.chunk.css.map": "/waterate/static/css/main.0d886270.chunk.css.map",
     "static/js/2.16731ad1.chunk.js.LICENSE.txt": "/waterate/static/js/2.16731ad1.chunk.js.LICENSE.txt",
     "static/media/Wave.e67728a7.svg": "/waterate/static/media/Wave.e67728a7.svg",
     "static/media/icon-back.7aecc83e.svg": "/waterate/static/media/icon-back.7aecc83e.svg",
@@ -31,7 +31,7 @@
   "entrypoints": [
     "static/js/runtime-main.f214d78c.js",
     "static/js/2.16731ad1.chunk.js",
-    "static/css/main.17edc70b.chunk.css",
+    "static/css/main.0d886270.chunk.css",
     "static/js/main.ab0104c4.chunk.js"
   ]
 }
