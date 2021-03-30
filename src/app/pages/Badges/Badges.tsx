@@ -24,18 +24,21 @@ export const Badges: React.FC = () => {
       </div>
       {selectedBadgeId && <BadgeDetails selectedBadgeId={selectedBadgeId} />}
       {!selectedBadgeId && (
-        <div className={styles.badgesList}>
-          {badgesList.map((badge) => (
-            <Badge
-              icon={badge.icon}
-              label={badge.label}
-              discovered={badge.discovered}
-              onClick={showDetails}
-              details={badge.details}
-              key={badge.icon}
-            />
-          ))}
-        </div>
+        <>
+          <p>Badges support will be added soon!</p>
+          <div className={styles.badgesList}>
+            {badgesList.map((badge) => (
+              <Badge
+                icon={badge.icon}
+                label={badge.label}
+                discovered={badge.discovered}
+                onClick={showDetails}
+                details={badge.details}
+                key={badge.icon}
+              />
+            ))}
+          </div>
+        </>
       )}
       <ButtonsPanel>
         <ButtonBase
