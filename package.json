@@ -31,7 +31,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "favicon:generate": "real-favicon generate faviconConfig.json faviconData.json public"
+    "favicon:generate": "real-favicon generate faviconConfig.json faviconData.json public",
+    "release": "yarn gh-pages --dist build --dotfiles --repo https://github.com/jmarceli/waterate.git"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -52,6 +53,7 @@
     "@types/classnames": "^2.2.11",
     "@types/lodash": "^4.14.168",
     "@types/react-router-dom": "^5.1.7",
-    "cli-real-favicon": "^0.0.8"
+    "cli-real-favicon": "^0.0.8",
+    "gh-pages": "^3.1.0"
   }
 }

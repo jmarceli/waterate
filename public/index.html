@@ -3,11 +3,6 @@
   <head>
     <meta charset="utf-8" />
     <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="%PUBLIC_URL%/apple-touch-icon.png"
-    />
-    <link
       rel="icon"
       type="image/png"
       sizes="32x32"
@@ -45,6 +40,66 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>Waterate</title>
+
+    <!-- http://taylor.fausak.me/2015/01/27/ios-8-web-apps/ -->
+
+    <!-- CONFIGURATION -->
+
+    <!-- Allow web app to be run in full-screen mode. -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <!-- Make the app title different than the page title. -->
+    <meta name="apple-mobile-web-app-title" content="Waterate" />
+
+    <!-- Configure the status bar. -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+    <!-- Set the viewport. -->
+    <meta name="viewport" content="initial-scale=1" />
+
+    <!-- Disable automatic phone number detection. -->
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- ICONS -->
+
+    <!-- iPhone 6 Plus icon -->
+    <link
+      href="%PUBLIC_URL%/icons/icon-120.png"
+      sizes="120x120"
+      rel="apple-touch-icon-precomposed"
+    />
+
+    <!-- iPhone retina icon (iOS < 7) -->
+    <link
+      href="%PUBLIC_URL%/icons/icon-114.png"
+      sizes="114x114"
+      rel="apple-touch-icon-precomposed"
+    />
+
+    <!-- iPhone non-retina icon (iOS < 7) -->
+    <link
+      href="%PUBLIC_URL%/icons/icon-57.png"
+      sizes="57x57"
+      rel="apple-touch-icon-precomposed"
+    />
+
+    <!-- STARTUP IMAGES -->
+
+    <!-- iPhone 6 startup image -->
+    <link
+      href="%PUBLIC_URL%/startup-images/startup-image-iphone6.png"
+      media="(device-width: 375px) and (device-height: 667px)
+                 and (-webkit-device-pixel-ratio: 2)"
+      rel="apple-touch-startup-image"
+    />
+
+    <!-- iPhone 5 startup image -->
+    <link
+      href="%PUBLIC_URL%/startup-images/startup-image-iphone5.png"
+      media="(device-width: 320px) and (device-height: 568px)
+                 and (-webkit-device-pixel-ratio: 2)"
+      rel="apple-touch-startup-image"
+    />
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
