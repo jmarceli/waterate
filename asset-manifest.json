@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/waterate/static/css/main.b5d381f4.css",
-    "main.js": "/waterate/static/js/main.38f13916.js",
+    "main.js": "/waterate/static/js/main.423c2fd8.js",
     "static/js/787.5986a831.chunk.js": "/waterate/static/js/787.5986a831.chunk.js",
     "service-worker.js": "/waterate/service-worker.js",
     "static/media/icon-badge-water-week.svg": "/waterate/static/media/icon-badge-water-week.3fd8c120f95239d252ca2acb9411114f.svg",
@@ -19,11 +19,11 @@
     "static/media/icon-back.svg": "/waterate/static/media/icon-back.7aecc83ec97d964459b0de0bfcfa58a3.svg",
     "static/media/Wave.svg": "/waterate/static/media/Wave.e67728a79d679058330ac567e82ec5cf.svg",
     "main.b5d381f4.css.map": "/waterate/static/css/main.b5d381f4.css.map",
-    "main.38f13916.js.map": "/waterate/static/js/main.38f13916.js.map",
+    "main.423c2fd8.js.map": "/waterate/static/js/main.423c2fd8.js.map",
     "787.5986a831.chunk.js.map": "/waterate/static/js/787.5986a831.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b5d381f4.css",
-    "static/js/main.38f13916.js"
+    "static/js/main.423c2fd8.js"
   ]
 }
